@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Pen+Script&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+body {
+  color: black;
+  background: white;
+  overflow-x: hidden;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.nanum-pen-script-regular {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img{
+  border-radius: 5px
+}
+
+.__navright {
+  color: #fff !important;
+}
+
+.swiper{
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-pagination {
+  left: 40% !important;
+  bottom: 40px !important; 
+}
+
+
+.desk {
+  display: none;
+}
+
+.mobile{
+  display: flex;
+}
+
+@media (min-width: 800px) {
+  .desk {
+      display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+
+/* .swiper-pagination-fraction, .swiper-pagination-custom,.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 400px !important;
+} */
+
+.swiper-pagination-bullet{
+  width: 13px !important;
+  height: 13px !important;
+  border: 2px white solid;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background: white !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.contact{
+  
+  background: url("/contactdesktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 400px;
+}
+
+.wavemain{
+  background-image: url("https://res.cloudinary.com/dnir0cslk/image/upload/v1724970206/efc8d97266510d64068ed6c8a3c3cba2_hfq5bh.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.wave2{
+  background: url("https://res.cloudinary.com/dnir0cslk/image/upload/v1724783245/b9aaaaddc28f05d63b1845c37655c732_ux0bgz.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.wave{
+  background: url("https://res.cloudinary.com/dnir0cslk/image/upload/v1724783247/83d709a9f5a2e252ac425726313f6576_y9kkde.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.wave3{
+  background: url("https://res.cloudinary.com/dnir0cslk/image/upload/v1724783250/cc48cdc4834fc1c46593b0084aab1850_eamrhm.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .wave3{
+    background-position: center calc(50% + 250px);
+  
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .swiper-pagination {
+    left: 30% !important;
+    bottom: 20px !important; 
+  }
+  
+}
+@media only screen and (max-width: 600px) {
+  .wave, .wave2, .wave3, .wavemain {
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+  }
+
+  .navbar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    z-index: 10;
+  }
+  .contact{
+  
+    background: url("/contact.svg");
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 200px;
+  }
+
+  .wave{
+    background-image: url("https://res.cloudinary.com/dnir0cslk/image/upload/v1724970206/efc8d97266510d64068ed6c8a3c3cba2_hfq5bh.png");
+  }
+
+  .wavemain {
+  background-image: url("/background.jpeg");
+
+    /* background: url("https://res.cloudinary.com/dnir0cslk/image/upload/v1724783247/83d709a9f5a2e252ac425726313f6576_y9kkde.png"); */
+    background-position: center;
+  }
+}
