@@ -9,6 +9,8 @@
 # testing
 /coverage
 
+/public
+
 .vercel
 /.vercel
 
